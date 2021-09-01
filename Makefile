@@ -90,7 +90,7 @@ deps:
 
 .PHONY: telegraf
 telegraf:
-	go build -ldflags "$(LDFLAGS)" ./cmd/telegraf
+	go build -ldflags "-w -s $(LDFLAGS)" ./cmd/telegraf
 
 # Used by dockerfile builds
 .PHONY: go-install
